@@ -1,7 +1,6 @@
 package translate
 
 import (
-	"os"
 	"testing"
 )
 
@@ -9,8 +8,31 @@ func TestOpenaiTranslate(t *testing.T) {
 	for _, unit := range []struct {
 		text, from, to string
 	}{//需要添加OPENAI_API_KEY，才能测试
+		{`PED-032 たった7時間2人っきりにしてみたら…結果、11発セックスしてました。 藤井レイラ - JavBus`, "", "zh-CN"},
+		{`DKD-011 明日にはパパになるっていうのに、こんなことしていいんですか？ 流川莉央 - JavBus`, "", "zh-CN"},
+		{`CKW-001 呼び出されるのは、いつも決まって昼休み。なのに…射精は9時間後。しかもそれから直後責め。そして結局、連射セックス 佐藤ののか - JavBus`, "", "zh-CN"},
+		{`VDD-176 秘書in...（脅迫スイートルーム） もなみ鈴 - JavBus`, "", "zh-CN"},
+		{`HTHD-209 友達の母親～最終章～ 松岡三奈 - JavBus`, "", "zh-CN"},
+		{`CVDX-537 五十路六十路限定！！ほとばしる小便！排尿おばさんの種々様々おしっこ模様。38人4時間 - JavBus`, "", "zh-CN"},
+		{`FGAN-088 おもらしパンチラ誘惑娘 ～見せつけながらおもらししちゃう可愛くてスケベなJ○との同棲生活 由良かな - JavBus`, "", "zh-CN"},
+		{`FGAN-087 完全主観JOI 花狩まいのせんずり管理 - JavBus`, "", "zh-CN"},
+		{`WAWA-013 絶倫爆乳ぬるぬる泡姫 色白マシュマロボディGカップ - JavBus`, "", "zh-CN"},
+		{`NHDTB-788 乳首ちゅぱちゅぱ逆痴漢 中年男を唾液舐めとこねくり手コキで虜にする痴… - JavBus`, "", "zh-CN"},
+		{`DANDY-863 先生はレズビアン?!優しい家庭教師にマ〇コが敏感過ぎて困っていると相談… - JavBus`, "", "zh-CN"},
+		{`AKDL-236 【職場でヤレる女】 社内ではクールな僕のセフレちゃん 裏の顔は甘えん坊でチンコを求めてくる女-実はこの女フェラ好きです。- 営業部 葵 24歳 中城葵 - JavBus`, "", "zh-CN"},
+		{`HAWA-298 生活に困り自宅でメンズエステを始めた近所のシングルマザーと中出しSEX … - JavBus`, "", "zh-CN"},
+		{`IENF-271 仲良し姉弟が賞金欲しさにエロミッションに挑戦!禁断の近親相姦!絶倫弟が… - JavBus`, "", "zh-CN"},
+		{`IENF-272 アナルのシワの数までハッキリわかる!ノーモザイク連続絶頂アナル見せオ… - JavBus`, "", "zh-CN"},
+		{`IESM-069 紺野みいな 緊縛解禁 - JavBus`, "", "zh-CN"},
+		{`NHDTB-782 セックスしないと降りられないバス - JavBus`, "", "zh-CN"},
+		{`NHDTB-785 連日ケツ穴ほじくり痴漢 指入れ拡張で感じてしまいアナル中出しされた美… - JavBus`, "", "zh-CN"},
+		{`NHDTB-786 侵入者に媚薬まみれのディルドオナニーを強要されイキ狂う女子大生 - JavBus`, "", "zh-CN"},
+		{`NHDTB-787 拘束スローピストン騎乗位レイプ ～大好きな義父の自由を奪い無理やり中… - JavBus`, "", "zh-CN"},
+		{`326FCT-017 甘え上手な薬学部在籍中のインテリJDに中出し2回戦！！騎乗位でブルンブルン揺れる102cmの美爆乳におっさんち○ぽも限界突破！！`, "", "zh-CN"},
+		{`MISM-274 肛門喉奥膣穴 欲張り3ツ穴マゾファッカー 美波こづえ - JavBus`, "", "zh-CN"},
+		{`MYBA-059 人妻の花びらめくり 武藤あやか MYBA-059`, "", "zh-CN"},
+		{`NHDTB-785 連日ケツ穴ほじくり痴漢 指入れ拡張で感じてしまいアナル中出しされた美… - JavBus`, "", "zh-CN"},
 		{`SSIS-743 バイト先のヤラせてくれそうな長身お姉さんの下半身がエロすぎて…職場で立ったまま後ろからハメまくった。 楓ふうあ - JavBus`, "", "zh-CN"},
-		{`JavBus - AV磁力連結分享 - 日本成人影片資料庫`, "", "zh-CN"},
 		{`FSDSS-621 体液で交感する絶え間ない官能セックス 茉城まみ - JavBus`, "", "zh-CN"},
 		{`FSDSS-631 1ヶ月超えの禁欲生活…その果てに到達した三葉ちはるの圧倒的オーガズム3… - JavBus`, "", "zh-CN"},
 		{`FSDSS-629 隣の異常性欲おじさんにゴミ部屋軟禁され絶え間なく強制絶頂漬け 時田亜美 - JavBus`, "", "zh-CN"},
@@ -32,7 +54,7 @@ func TestOpenaiTranslate(t *testing.T) {
 		{`KRS-216 浮気盛りの人妻さん 身持ちの堅そうな奧さんなんですが…05 - JavBus`, "", "zh-CN"},
 		{`AKID-102 旦那には見せない…。人妻たちのシタくて堪らない性欲を密かに盗撮2 光さん/Fカップ/32才/清楚でおしとやかに見える欲求不満妻 愛花さん/Fカップ/34才/ヤリ盛りで我慢できないサセ妻 - JavBus`, "", "zh-CN"},
 	} {
-		result, err := OpenaiTranslate(0, unit.text, unit.from, unit.to, os.Getenv("OPENAI_API_KEY"))
+		result, err := OpenaiTranslate(0, unit.text, unit.from, unit.to, "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")
 		if err != nil {
 			t.Fatal(err)
 		}
