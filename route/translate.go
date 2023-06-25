@@ -66,7 +66,7 @@ func getTranslate() gin.HandlerFunc {
 			result, err = translate.DeepLTranslate(query.Q, query.From, query.To,
 				c.Query(deeplAPIKey))
 		case openaiTranslateEngine:
-			result, err = translate.OpenaiTranslate(query.Q, query.From, query.To,
+			result, err = translate.OpenaiTranslate(0, query.Q, query.From, query.To,
 				c.Query(openaiAPIKey))
 		default:
 			abortWithStatusMessage(c, http.StatusBadRequest, "invalid translate engine")

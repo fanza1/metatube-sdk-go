@@ -8,14 +8,31 @@ import (
 func TestOpenaiTranslate(t *testing.T) {
 	for _, unit := range []struct {
 		text, from, to string
-	}{
-		{`Oh yeah! I'm a translator!`, "", "zh-CN"},
-		{`Oh yeah! I'm a translator!`, "", "zh-TW"},
-		{`Oh yeah! I'm a translator!`, "", "ja"},
-		{`Oh yeah! I'm a translator!`, "", "de"},
-		{`Oh yeah! I'm a translator!`, "", "fr"},
+	}{//需要添加OPENAI_API_KEY，才能测试
+		{`SSIS-743 バイト先のヤラせてくれそうな長身お姉さんの下半身がエロすぎて…職場で立ったまま後ろからハメまくった。 楓ふうあ - JavBus`, "", "zh-CN"},
+		{`JavBus - AV磁力連結分享 - 日本成人影片資料庫`, "", "zh-CN"},
+		{`FSDSS-621 体液で交感する絶え間ない官能セックス 茉城まみ - JavBus`, "", "zh-CN"},
+		{`FSDSS-631 1ヶ月超えの禁欲生活…その果てに到達した三葉ちはるの圧倒的オーガズム3… - JavBus`, "", "zh-CN"},
+		{`FSDSS-629 隣の異常性欲おじさんにゴミ部屋軟禁され絶え間なく強制絶頂漬け 時田亜美 - JavBus`, "", "zh-CN"},
+		{`FSDSS-611 退勤してから出勤するまでずっと2人っきり天使もえと見つめ合い愛し合う… - JavBus`, "", "zh-CN"},
+		{`REXD-475 えっ…嘘でしょ… 心霊スタジオ検証中 なんか…クリがジンジンする… - JavBus`, "", "zh-CN"},
+		{`REXD-474 情報を流出させた配達員の末路 三田サクラ - JavBus`, "", "zh-CN"},
+		{`REXD-473 地下アイドル握手会の女性警備員 渋谷華 - JavBus`, "", "zh-CN"},
+		{`BONY-052 国立小○校教諭からの転落！彼氏に数百万円貸すも逃げられ自己破産。生活が困窮し中出しさせて対価を得る経験人数1人地味ダサ美巨乳天然メススッポン - JavBus`, "", "zh-CN"},
+		{`BONY-051 搾精女vs12人の漢！望月あやかと汁まみれ！！念願の47都道府県のチ○コ制覇に向け風俗案内所で立ちむぽハンティング！！ - JavBus`, "", "zh-CN"},
+		{`BOBB-381 白衣の爆乳Icup天使 ナースコールで始まる秘密のおっぱい看護 Boin「宝田もなみ」Box - JavBus`, "", "zh-CN"},
+		{`ORECS-006 おしとやかなピュア女子大生//性欲覚醒しちゃうと止まらない//すずかさん（20才）＆ハイスペック奥様//圧倒的麗しBODY//このはさん（25才）結婚1年目 - JavBus`, "", "zh-CN"},
+		{`ORECS-007 可愛いアニメ声//特技ダンス//地下アイドル女子大生つむぎさん（22才） - JavBus`, "", "zh-CN"},
+		{`ORECS-008 彼有り女子大生//超ウブ//しずくさん（22才） - JavBus`, "", "zh-CN"},
+		{`CJOB-131 デカ乳ブルンッ！ブルンッ！チ○ポ貪る腰振りで何発も何発も射精されるッ！逆レ○プ騎乗位BEST - JavBus`, "", "zh-CN"},
+		{`ORECS-009 奇跡の爆乳女子大生//彼に内緒で生ハメ生パコ//ねねさん（20才） - JavBus`, "", "zh-CN"},
+		{`ORECS-010 美巨乳ちょいギャル女子大生//どエロい身体//デカチンハードピストンに悶絶//イキまくり痙攣絶頂//連続生中出し//なつめさん（21才） - JavBus`, "", "zh-CN"},
+		{`CJOB-132 奪い合いハーレム追撃お掃除フェラBEST「もう射精してるってばぁ～！」状態でもこねくり射精されちゃったボク - JavBus`, "", "zh-CN"},
+		{`CJOD-385 M男専用密着ささやき淫語で何度もヌカれちゃう無制限射精ソープ 綾瀬こころ - JavBus`, "", "zh-CN"},
+		{`KRS-216 浮気盛りの人妻さん 身持ちの堅そうな奧さんなんですが…05 - JavBus`, "", "zh-CN"},
+		{`AKID-102 旦那には見せない…。人妻たちのシタくて堪らない性欲を密かに盗撮2 光さん/Fカップ/32才/清楚でおしとやかに見える欲求不満妻 愛花さん/Fカップ/34才/ヤリ盛りで我慢できないサセ妻 - JavBus`, "", "zh-CN"},
 	} {
-		result, err := OpenaiTranslate(unit.text, unit.from, unit.to, os.Getenv("OPENAI_API_KEY"))
+		result, err := OpenaiTranslate(0, unit.text, unit.from, unit.to, os.Getenv("OPENAI_API_KEY"))
 		if err != nil {
 			t.Fatal(err)
 		}
